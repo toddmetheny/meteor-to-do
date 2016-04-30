@@ -8,9 +8,13 @@
         Hide Completed Tasks
       </label>
 
-      <form class="new-task">
-        <input type="text" name="text" placeholder="Type to add new tasks" />
-      </form>
+      {{> loginButtons}}
+      
+      {{#if currentUser}}
+        <form class="new-task">
+          <input type="text" name="text" placeholder="Type to add new tasks" />
+        </form>
+      {{/if}}
     </header>
  
     <ul>
@@ -20,7 +24,4 @@
     </ul>
   </div>
 </body>
- 
-<!-- <template name="task">
-  <li>{{text}}</li>
-</template> -->
+
